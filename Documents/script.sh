@@ -13,7 +13,7 @@ App() {
 	then
 		echo -n "$NOMEAPP"
 	else
-		echo -n "Shizuku:Desktop uwu"
+		echo -n "::Desktop"
 	fi
 }
 
