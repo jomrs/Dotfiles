@@ -19,7 +19,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a feh state=floating
 bspc rule -a xfce4-terminal state=floating
 
-~/Documents/script.sh | lemonbar -p &
+~/.config/bswpm/lemobar.sh | lemonbar -p &
 hsetroot -solid '#81A3D0' &
 xfce4-terminal 
 
