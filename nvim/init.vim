@@ -1,38 +1,43 @@
-" interface
-set number
-
-" plug
+" Plug
 call plug#begin()
+
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'itchyny/lightline.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
-" theme
+" Theme
 colorscheme tokyonight
 let g:lightline = {'colorscheme': 'tokyonight'}
 set noshowmode
 color tokyonight
 set cursorline
+set showmatch
+set number
 
+" Identation with spaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Keybinds
 " ====== tabs =====
-nnoremap <Leader>tn :tabnew<CR>
-nnoremap <Leader>tk :tabnext<CR>
-nnoremap <Leader>tj :tabprev<CR>
+nnoremap <leader>tn :tabnew<cr>
+nnoremap <leader>tk :tabnext<cr>
+nnoremap <leader>tj :tabprev<cr>
 " ===== telescope ====
-nnoremap <Leader>ff <CMD>Telescope find_files<CR>
-nnoremap <Leader>fg <CMD>Telescope live_grep<CR>
+nnoremap <leader>ff <cmd>telescope find_files<cr>
+nnoremap <leader>fg <cmd>telescope live_grep<cr>
 " ===== folder navigation =====
 lua require'nvim-tree'.setup {}
-nnoremap <Leader>bn :NvimTreeToggle<CR>
-nnoremap <Leader>bc :NvimTreeCollapse<CR>
+nnoremap <C-n> :nvimtreetoggle<cr>
+nnoremap <leader>bc :nvimtreecollapse<cr>
 " ==== code navigation ====
-nnoremap <A-k> :m-2<CR>==
-nnoremap <A-j> :m+<CR>==
+nnoremap <M-Up> :m-2<CR>==
+nnoremap <M-Down> :m+<CR>==
 
