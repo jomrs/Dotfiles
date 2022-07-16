@@ -2,13 +2,11 @@
 
 Desktop() {
 	ATUAL=$(xdotool get_desktop)
-
 	echo -n "[$ATUAL]"
 }
 
 App() {
 	NOMEAPP=$(xdotool getwindowfocus getwindowname)
-	
 	if [ "$NOMEAPP" != "" ]
 	then
 		echo -n "$NOMEAPP"
@@ -19,10 +17,8 @@ App() {
 
 Relogio() {
 	DATET=$(date "+%a %b %d, %T")
-
 	echo -n "$DATET"
 }
-
 
 while true; do
 	echo "$(Desktop) $(App) %{r} $(Relogio)"
