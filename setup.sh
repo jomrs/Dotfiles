@@ -1,11 +1,12 @@
 #!/bin/bash
 
-#Acutal Path.
+#Actual Path.
 CURRENT_PATH=$PWD
+
 #Folders to Restore Ignoring sh setup file.
 CONFIGS_FOLDER=(`ls -I '*.sh'`)
 
-echo '⚡Restoring default config...'
+echo '⚡ Restoring default config...'
 sleep 1
 
 #Loop through folders to copy them.
