@@ -31,13 +31,12 @@ nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>tk :tabnext<cr>
 nnoremap <leader>tj :tabprev<cr>
 " ===== telescope ====
-nnoremap <leader>ff <cmd>telescope find_files<cr>
-nnoremap <leader>fg <cmd>telescope live_grep<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 " ===== folder navigation =====
 lua require'nvim-tree'.setup {}
-nnoremap <C-n> :nvimtreetoggle<cr>
-nnoremap <leader>bc :nvimtreecollapse<cr>
+nnoremap <C-n> :NvimTreeToggle<cr>
+nnoremap <leader>bc :NvimTreeCollapse<cr>
 " ==== code navigation ====
 nnoremap <M-Up> :m-2<CR>==
 nnoremap <M-Down> :m+<CR>==
-
